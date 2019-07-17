@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="seleccion.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+
+    <title>ESET</title>
+  </head>
+  <body>
+    <!--Header-->
+    <header id="header">
+      <div class="containter">
+        <div class="row">
+            <div class="col-12 navbar">
+              <nav class="navbar navbar-light">
+                <a class="navbar-brand" href="#">
+                <img class="logo"src="img/logo.jpg" class="d-inline-block align-top" alt="eset logo">
+              </a>
+            </nav>
+          </div>
+          </div>
+        </div>
+    </header>    
+    <!--Header-->
+
+    <!--Section-->
+    <section id="selection" class="selection mt-4">
+      <div class="row navOne">
+        <div class="col-3 p-0">
+          <div class="btnPantallas nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="btnPantallas nav-link active border" id="pantallaV1" data-toggle="pill" href="#v-pills-pantalla1" role="tab" aria-controls="v-pills-pantalla1" aria-selected="true">Pantalla 1</a>
+            <a class="btnPantallas nav-link border" id="pantalla2" data-toggle="pill" href="#v-pills-pantalla2" role="tab" aria-controls="v-pills-pantalla2" aria-selected="false">Pantalla 2</a>
+            <a class="btnPantallas nav-link border" id="pantalla3" data-toggle="pill" href="#v-pills-pantalla3" role="tab" aria-controls="v-pills-pantalla3" aria-selected="false">Pantalla 3</a>
+            <a class="btnPantallas nav-link border" id="pantalla4" data-toggle="pill" href="#v-pills-pantalla4" role="tab" aria-controls="v-pills  -pantalla4" aria-selected="false">Pantalla 4</a>
+            <a class="btnPantallas nav-link border" id="pantalla5" data-toggle="pill" href="#v-pills-pantalla5" role="tab" aria-controls="v-pills-pantalla5" aria-selected="false">Pantalla 5</a>
+            <a class="btnPantallas nav-link border" id="pantalla6" data-toggle="pill" href="#v-pills-pantalla6" role="tab" aria-controls="v-pills-pantalla6" aria-selected="false">Pantalla 6</a>
+          </div>
+        </div>
+        <div class="col-9 navOne space">
+          <div class="tab-content" id="v-pills-tabContent">
+
+            <!--Pantalla 1-->
+            <div class="tab-pane fade show active p-3" id="v-pills-pantalla1" role="tabpanel" aria-labelledby="v-pills-pantalla1-tab">
+              <div class="imagePantalla1">
+                <h4>Pantalla Vertical 1</h4>
+                <form action="/action_page.php">
+                  <input type="hidden" name="opcionPantalla1arriba" value="p2">
+                  <p class="text-body">Tipo de archivo en la pantalla de arriba</p>
+                  <input type="radio" name="pV1" value="imagen"> <label for="pV1">Imagen</label>
+                  <input type="radio" name="pV1" value="video"><label for="pV1">Video</label><br>
+                  <div  class="archivoV1">
+                      <input type="file" name="pic" accept="image/*" class="mt-3"><br>
+                   </div>
+                </form>
+
+                <form action="/action_page.php">
+                  <input type="hidden" name="opcionPantalla1abajo" value="p2">
+                  <p class="text-body mt-4">Tipo de archivo en la pantalla de abajo</p>
+                  <input type="radio" name="pV2" value="imagen"> <label for="pV2">Imagen</label>
+                  <input type="radio" name="pV2" value="video"><label for="pV2">Video</label><br>
+                  <div  class="archivoV2">
+                      <input type="file" name="pic" accept="image/*" class="mt-3"><br>
+                   </div>
+                </form>
+                <input type="button" class="btn btn-success mt-4 show" value="Guardar">
+              </div>
+            </div>
+
+            <!--Pantalla 2-->
+            <div class="tab-pane fade p-3" id="v-pills-pantalla2" role="tabpanel" aria-labelledby="v-pills-pantalla2-tab">
+                <div class="imagePantalla2">
+                  <h4>Pantalla Horizontal 2</h4>
+                  <form action="/action_page.php">
+                    <input type="hidden" name="opcionPantalla2" value="p2"> 
+                    <p class="text-body">Tipo de archivo</p>
+                    <input type="radio" name="pH" value="imagen"> <label for="pH">Imagen</label>
+                    <input type="radio" name="pH" value="video"><label for="pH">Video</label><br>
+                    <div  class="archivoH">
+                      <input type="file" name="pic" accept="image/*" class="mt-3"><br>
+                    </div>
+                    <input type="button" class="btn btn-success mt-4" value="Guardar">
+                  </form>
+                </div>
+            </div>
+
+            <!--Pantalla 3-->
+            <div class="tab-pane fade p-3" id="v-pills-pantalla3" role="tabpanel" aria-labelledby="v-pills-pantalla3-tab">
+                <div class="imagePantalla3">
+                  <h4>Pantalla Horizontal 3</h4>
+                  <form action="/action_page.php">
+                    <p class="text-body">Tipo de archivo</p>
+                    <input type="checkbox"> <span>Imagen</span>
+                    <input type="checkbox"> <span>Video</span><br>
+                    <input type="file" name="pic" accept="image/*" class="mt-3"><br>
+                    <input type="button" class="btn btn-success mt-4" value="Guardar">
+                  </form>
+                </div>
+            </div>
+
+            <!--Pantalla 4-->
+            <div class="tab-pane fade p-3" id="v-pills-pantalla4" role="tabpanel" aria-labelledby="v-pills-pantalla4-tab">
+                <div class="imagePantalla4">
+                    <p class="text-body">Cargar imagen</p>
+                    <form action="/action_page.php">
+                      <input type="file" name="pic" accept="image/*">
+                    </form>
+                    <p class="text-body mt-3">Cargar video</p>
+                    <form action="/action_page.php">
+                      <input type="file" name="pic" accept="video/*">
+                    </form>
+                    <button type="button" class="btn btn-success mt-5">Guardar</button>
+                </div>
+            </div>
+
+            <!--Pantalla 5-->
+            <div class="tab-pane fade p-3" id="v-pills-pantalla5" role="tabpanel" aria-labelledby="v-pills-pantalla5-tab">
+                <div class="imagePantalla5">
+                    <p class="text-body">Cargar imagen</p>
+                    <form action="/action_page.php">
+                      <input type="file" name="pic" accept="image/*">
+                    </form>
+                    <p class="text-body mt-3">Cargar video</p>
+                    <form action="/action_page.php">
+                      <input type="file" name="pic" accept="video/*">
+                    </form>
+                    <button type="button" class="btn btn-success mt-5">Guardar</button>
+                </div>
+            </div>
+
+            <!--Pantalla 6-->
+            <div class="tab-pane fade p-3" id="v-pills-pantalla6" role="tabpanel" aria-labelledby="v-pills-pantalla6-tab">
+                <div class="imagePantalla6">
+                    <p class="text-body">Cargar imagen</p>
+                    <form action="/action_page.php">
+                      <input type="file" name="pic" accept="image/*">
+                    </form>
+                    <p class="text-body mt-3">Cargar video</p>
+                    <form action="/action_page.php">
+                      <input type="file" name="pic" accept="video/*">
+                    </form>
+                    <button type="button" class="btn btn-success mt-5">Guardar</button>
+                </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>  
+    <!--Section-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnj s.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+    <script src="seleccion.js"></script>
+
+  </body>
+</html>

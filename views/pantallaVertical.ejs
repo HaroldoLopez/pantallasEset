@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow: hidden;">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" type="text/css" href="pantalla.css">
+        <link rel="stylesheet" href="w3schoolEfect1.css">
+        <title>ESET</title>
+        
+    </head>
+    <body style="background:black;overflow: hidden;">
+        
+        <input type="hidden" id="np" name="np" value="<%= np %>">   
+    
+        <div class="w3-content w3-section" style="margin:0px!important;max-width:100%;max-height:100%;width:100vw;height:100vh;overflow: hidden;">
+            
+            <% for(var i=0; i<urls.length; i++) {%>
+                <% if (efecto == "uno") { %>
+                    <img class="mySlides w3-display-left" style="width:100%;heigth:100%;overflow: hidden;" src="<%= urls[i] %>"/>
+                <% }else{ %>
+                    <img class="mySlides w3-animate-fading" style="width:100%;heigth:100%;overflow: hidden;" src="<%= urls[i] %>"/>
+                <% } %>
+            <% } %>
+
+            
+
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 5000); //Tiempo para que aparezca la imagen    
+        }
+    </script>
+
+    
+
+    <script src="http://192.168.1.250:3000/socket.io/socket.io.js"></script>
+
+    <script>
+        
+        var np = document.getElementById("np").value
+
+        // Inicializando ws
+        var socket = io('http://192.168.1.250:3000',{
+                reconnection: true,
+                reconnectionDelay: 500,
+                query: 'name='+np
+            });
+
+        socket.on('recargar', function(msg){
+            console.log("Recargando..")
+            //$("#msj").slideUp( 500 ).delay( 500 ).fadeIn( 500 );
+            //$("#msj").html("Recargando..");
+            location.reload();
+        });
+
+        socket.on('initName', function(msg){
+            console.log(msg)
+            //$("#msj").slideUp( 500 ).delay( 500 ).fadeIn( 500 );
+            //$("#msj").html("Recargando..");
+        });
+
+        //---------------------------------
+        
+
+    </script>
+    </body>
+</html> 

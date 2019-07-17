@@ -1,0 +1,151 @@
+.pantallaHorizontal{
+    border: solid 2px rgb(161, 161, 161);
+    height:40vh;
+    padding:0px;
+    border-radius: 6px;
+    background-color:rgba(241, 241, 241, 0.712);
+    -moz-box-shadow: 1px 2px 4px rgba(202, 202, 202, 0.5);
+    -webkit-box-shadow: 1px 2px 4px rgba(158, 157, 157, 0.5);
+    box-shadow: 1px 2px 4px rgba(83, 83, 83, 0.5);
+}
+
+.anch{
+    width: 366px;
+}
+
+.effect{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+}
+button{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width: 100%;
+    border: 0px !important;
+}
+.effect:hover{
+    color:white !important;
+    background-color: #5f6768d7;
+    height:100%;
+}
+h2{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.pantallaVertical{
+    border: solid 2px rgb(161, 161, 161);
+    height:50vh;
+    border-radius: 6px;
+    background-color:rgba(241, 241, 241, 0.712);
+}
+
+.pantallaVertical:hover{
+    background-color:#c7c2c2d7;
+}
+
+.close{ 
+    width:20%;
+}
+
+.space{
+    display:flex;
+    justify-content: center;
+}
+
+.group{
+    border: solid 1px rgb(187, 186, 186);
+    border-radius: 6px;
+    background-color:#F1F1F1;
+    -moz-box-shadow: 1px 2px 3px rgba(202, 202, 202, 0.5);
+    -webkit-box-shadow: 1px 2px 3px rgba(158, 157, 157, 0.5);
+    box-shadow: 1px 2px 3px rgba(83, 83, 83, 0.5);
+}
+
+.padding{
+    padding: 0px;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    width:1200px;
+}
+
+.tam{
+    width: 380px !important;
+}
+
+.img{
+    width:100%;
+    height: 100%;
+}
+
+.lp:hover{
+    opacity: 0.5;
+  }
+
+.contain {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.contain:hover .lp {
+    opacity: 0.3;
+}
+  
+.contain:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color: rgb(34, 119, 91);
+    color: white;
+    font-size: 30px;
+    padding: 16px 32px;
+  }
+
+  .images{
+      width: 100%;
+      display:flex;
+      flex-wrap: wrap;
+  }
+
+  .image{
+      width:100px;
+      display: flex;
+      justify-content: center;
+  }
+
+  .imagn{
+    background-image:url(img/robot.jpg);
+    background-repeat:no-repeat;
+    width:100px;
+    background-position:center;
+    background-size: contain;
+    width:100px;
+    height: 70px;
+  }
+  .cerrar{
+    height:20px !important;
+  }
+
+  .x{
+      background-color: rgba(255, 255, 255, 0.685);
+      padding-left: 1px;
+      color: black;
+  }

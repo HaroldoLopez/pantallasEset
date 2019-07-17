@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="/seleccion.css">
+  <link rel="stylesheet" type="text/css" href="/index.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+
+  <title>Inicio ESET</title>
+</head>
+<body>
+  <!--Header-->
+  <header id="header">
+	  <div class="containter">
+		<div class="row">
+		  <div class="col-12 navbar">
+			<nav class="navbar navbar-light">
+			  <a class="navbar-brand" href="#">
+				<img class="logo"src="/img/logo.jpg" class="d-inline-block align-top" alt="">
+			  </a>
+			</nav>
+		  </div>
+		</div>
+	  </div>
+  </header>    
+  <!--Header-->
+
+  <!--pantallas arriba-->
+  <div class="container mt-5">
+	<div class="container">
+	  <div class="row">
+		
+		<!--Vertical arriba 1-->
+		<div class="col-3 offset-md-1 mr-4">
+		  <div class="effectV ml-3">
+			<div class="pantallaVertical">
+				<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#pantallaV1">
+					<h2>1</h2>
+				</button>
+
+				  <!-- Modal -->
+				<div class="modal fade" id="pantallaV1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<form id="archivo_form" method="POST" enctype="multipart/form-data">
+							<!-- Tipo de pantalla -->
+							  <input type="hidden" name="pantallaOpc" value="p1">
+						<div class="modal-content">
+						  <div class="modal-header">
+
+							<!-- previsualizar pantalla vertical arriba-->
+							<h5 class="modal-title" id="exampleModalCenterTitle">Pantalla vertical arriba 1</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <span aria-hidden="true">&times;</span>
+							</button>
+						  </div>
+						  <div class="modal-body">
+							  
+							  <p class="text-body">Tipo de archivo en la pantalla de arriba</p>
+							  <input type="radio" name="pV1" value="imagen"> <label for="pV1">Imagen</label>
+							  <input type="radio" name="pV1" value="video"><label for="pV1">Video</label><br>
+							  <div  class="archivoV1">
+								<input type="file" name="pic" accept="image/*" class="mt-3"><br>
+							  </div>
+							  
+						  </div>
+						  <div class="modal-footer">
+							<button id="subirArchivo" type="button" class="btn btn-info">Guardar</button>
+						  </div>
+						</div>
+					  </form>
+					</div>
+				</div>
+			  </div>
+
+			<!--Vertical abajo-->
+			<div class="pantallaVertical mt-1">
+				<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#pantallaV2">
+					<h2>2</h2>
+				</button>
+				  <!-- Modal -->
+				  <div class="modal fade" id="pantallaV2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					  <div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<h5 class="modal-title" id="exampleModalCenterTitle">Pantalla vertical abajo 2</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <span aria-hidden="true">&times;</span>
+							</button>
+						  </div>
+						  <div class="modal-body">
+							<form action="/action_page.php">
+								<input type="hidden" name="opcionPantalla1abajo" value="p2">
+								<p class="text-body mt-4">Tipo de archivo en la pantalla de abajo</p>
+								<input type="radio" name="pV2" value="imagen"> <label for="pV2">Imagen</label>
+								<input type="radio" name="pV2" value="video"><label for="pV2">Video</label><br>
+								<div  class="archivoV2">
+								  <input type="file" name="pic" accept="image/*" class="mt-3"><br>
+								</div>
+							</form>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-info">Guardar</button>
+						  </div>
+						</div>
+					  </div>
+				  </div>
+				
+				</div>
+		  </div>
+		</div>
+
+		<!--Vertical arriba 3-->
+		<div class="col-3 mr-5">
+		  <div class="effectV col-3">
+		  <div class="pantallaVertical">
+			  <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#pantallaV3">
+				  <h2>3</h2>
+			  </button>
+
+				<!-- Modal -->
+			  <div class="modal fade" id="pantallaV3" tabindex="-1" role="dialog" aria-labelledby="vertical3" aria-hidden="true">
+				  <div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+					  <div class="modal-header">
+
+						<!-- previsualizar pantalla vertical arriba-->
+						<h5 class="modal-title" id="exampleModalCenterTitle">Pantalla vertical arriba 3</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						  <span aria-hidden="true">&times;</span>
+						</button>
+					  </div>
+					  <div class="modal-body">
+						<form action="/action_page.php">
+						  <input type="hidden" name="opcionPantalla1arriba" value="p2">
+						  <p class="text-body">Tipo de archivo en la pantalla de arriba</p>
+						  <input type="radio" name="pV1" value="imagen"> <label for="pV1">Imagen</label>
+						  <input type="radio" name="pV1" value="video"><label for="pV1">Video</label><br>
+						  <div  class="archivoV1">
+							<input type="file" name="pic" accept="image/*" class="mt-3"><br>
+						  </div>
+						  </form>
+					  </div>
+					  <div class="modal-footer">
+						<button type="button" class="btn btn-info">Guardar</button>
+					  </div>
+					</div>
+				  </div>
+			  </div>
+			</div>
+
+		  <!--Vertical abajo-->
+		  <div class="pantallaVertical mt-1">
+			  <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#pantallaV4">
+				  <h2>4</h2>
+			  </button>
+				<!-- Modal -->
+				<div class="modal fade" id="pantallaV4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <h5 class="modal-title" id="exampleModalCenterTitle">Pantalla vertical abajo 4</h5>
+						  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						  </button>
+						</div>
+						<div class="modal-body">
+						  <form action="/action_page.php">
+							  <input type="hidden" name="opcionPantalla1abajo" value="p2">
+							  <p class="text-body mt-4">Tipo de archivo en la pantalla de abajo</p>
+							  <input type="radio" name="pV2" value="imagen"> <label for="pV2">Imagen</label>
+							  <input type="radio" name="pV2" value="video"><label for="pV2">Video</label><br>
+							  <div  class="archivoV2">
+								<input type="file" name="pic" accept="image/*" class="mt-3"><br>
+							  </div>
+						  </form>
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-info">Guardar</button>
+						</div>
+					  </div>
+					</div>
+				</div>
+			  
+			  </div>
+		  </div>
+		</div>
+		
+		  <!--horizontal 4-->
+		  <div class="col-3 pantallaHorizontal">            
+				<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#pantallaH3">
+				  <h2>5</h2>
+				</button>
+  
+				<!-- Modal -->
+				<div class="modal fade" id="pantallaH3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <h5 class="modal-title" id="exampleModalCenterTitle">Pantalla horizontal 5</h5>
+						  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						  </button>
+						</div>
+						<div class="modal-body">
+							<form action="/action_page.php">
+							  <input type="hidden" name="opcionPantalla2" value="p2"> 
+							  <p class="text-body">Tipo de archivo</p>
+							  <input type="radio" name="pH" value="imagen"> <label for="pH">Imagen</label>
+							  <input type="radio" name="pH" value="video"><label for="pH">Video</label><br>
+							  <div  class="archivoH">
+								<input type="file" name="pic" accept="image/*" class="mt-3"><br>
+							  </div>
+							</form>
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-info">Guardar</button>
+						</div>
+					  </div>
+					</div>
+				</div>
+  
+		  </div>
+		
+		</div>  
+		
+
+  <!--pantallas abajo-->
+  <div class="container mt-5 mb-5">
+	<div class="container">
+	  <div class="row">
+
+		  <!--horizontal 5-->
+		<div class="col-3 offset-md-1 mr-5 pantallaHorizontal">            
+			  <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#pantallaH4">
+				<h2>5</h2>
+			  </button>
+	  
+					<!-- Modal -->
+					<div class="modal fade" id="pantallaH4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+						  <div class="modal-content">
+							<div class="modal-header">
+							  <h5 class="modal-title" id="exampleModalCenterTitle">Pantalla horizontal 5 </h5>
+							  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+							<div class="modal-body">
+								<form action="/action_page.php">
+								  <input type="hidden" name="opcionPantalla2" value="p2"> 
+								  <p class="text-body">Tipo de archivo</p>
+								  <input type="radio" name="pH" value="imagen"> <label for="pH">Imagen</label>
+								  <input type="radio" name="pH" value="video"><label for="pH">Video</label><br>
+								  <div  class="archivoH">
+									<input type="file" name="pic" accept="image/*" class="mt-3"><br>
+								  </div>
+								</form>
+							</div>
+							<div class="modal-footer">
+							  <button type="button" class="btn btn-success" data-dismiss="modal" href="selection.html">Editar</button>
+							  <button type="button" class="btn btn-info">Guardar</button>
+							</div>
+						  </div>
+					  </div>
+				  </div>
+	  
+		</div>
+
+		  <!--horizontal 6-->
+		<div class="col-3 mr-1 pantallaHorizontal">            
+			  <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#pantallaH6">
+				<h2>6</h2>
+			  </button>
+	  
+					<!-- Modal -->
+					<div class="modal fade" id="pantallaH6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+						  <div class="modal-content">
+							<div class="modal-header">
+							  <h5 class="modal-title" id="exampleModalCenterTitle">Pantalla horizontal 6</h5>
+							  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+							<div class="modal-body">
+								<form action="/action_page.php">
+								  <input type="hidden" name="opcionPantalla2" value="p2"> 
+								  <p class="text-body">Tipo de archivo</p>
+								  <input type="radio" name="pH" value="imagen"> <label for="pH">Imagen</label>
+								  <input type="radio" name="pH" value="video"><label for="pH">Video</label><br>
+								  <div  class="archivoH">
+									<input type="file" name="pic" accept="image/*" class="mt-3"><br>
+								  </div>
+								</form>
+							</div>
+							<div class="modal-footer">
+							  <button type="button" class="btn btn-success" data-dismiss="modal" href="selection.html">Editar</button>
+							  <button type="button" class="btn btn-info">Guardar</button>
+							</div>
+						  </div>
+					  </div>
+				  </div>
+	  
+		</div>
+
+		<!--horizontal 7-->
+		<div class="col-3 ml-5 pantallaHorizontal">            
+			<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#pantallaH7">
+			  <h2>7</h2>
+			</button>
+	
+				  <!-- Modal -->
+				  <div class="modal fade" id="pantallaH7" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					  <div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<h5 class="modal-title" id="exampleModalCenterTitle">Pantalla horizontal 7</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <span aria-hidden="true">&times;</span>
+							</button>
+						  </div>
+						  <div class="modal-body">
+							  <form action="/action_page.php">
+								<input type="hidden" name="opcionPantalla2" value="p2"> 
+								<p class="text-body">Tipo de archivo</p>
+								<input type="radio" name="pH" value="imagen"> <label for="pH">Imagen</label>
+								<input type="radio" name="pH" value="video"><label for="pH">Video</label><br>
+								<div  class="archivoH">
+								  <input type="file" name="pic" accept="image/*" class="mt-3"><br>
+								</div>
+							  </form>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-success" data-dismiss="modal" href="selection.html">Editar</button>
+							<button type="button" class="btn btn-info">Guardar</button>
+						  </div>
+						</div>
+					</div>
+				</div>
+	
+		</div>
+	  </div>
+	</div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <!-- Optional JavaScript -->
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="http://malsup.github.com/jquery.form.js" defer></script>
+  <script src="/script.js"></script>
+
+</body>
+</html>

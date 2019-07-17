@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="pantalla.css">
+
+    <title>ESET</title>
+</head>
+<body>
+    <div class="pantalla">
+        <!-- <img class="image" src="img/logo.jpg"> -->
+    </div>
+
+	<script src="http://18.222.157.61:3000/socket.io/socket.io.js"></script>
+
+	<script>
+		
+		// Inicializando ws
+		var socket = io('http://18.222.157.61:3000',{
+				reconnection: true,
+			    reconnectionDelay: 500
+			});
+
+		socket.on('recargar', function(msg){
+			console.log("Recargando..")
+			//$("#msj").slideUp( 500 ).delay( 500 ).fadeIn( 500 );
+			//$("#msj").html("Recargando..");
+			location.reload();
+		});
+
+		socket.on('initIp', function(msg){
+			console.log(msg)
+			//$("#msj").slideUp( 500 ).delay( 500 ).fadeIn( 500 );
+			//$("#msj").html("Recargando..");
+		});
+
+		//---------------------------------
+		
+
+	</script>
+
+</body>
+</html>

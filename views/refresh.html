@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Refresh</title>
+</head>
+<body>
+
+	<input type="text" value="::ffff:190.143.187.122" id="ipCliente">
+	<input type="button" onclick="refresh()" value="Recargar" id="recargar">
+
+	<p id="status"></p>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script>
+		
+		$(document).ready(function(){
+			$("#recargar").click(function(){
+				document.getElementById("status").innerHTML = "Recargando...."
+				$.post("/recargar",{"pantallaOpc":"p1"},function(data){
+
+					console.log("Recargado!")
+					document.getElementById("status").innerHTML = data+"<br>Recargado!"
+				})
+			})
+		})
+
+	</script>
+	
+</body>
+</html>

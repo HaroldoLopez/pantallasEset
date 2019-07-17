@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="/seleccion.css">
+  <link rel="stylesheet" type="text/css" href="/index.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+
+  <title>Inicio ESET</title>
+</head>
+<body ng-controller="controller">
+  <!--Header-->
+  <header id="header">
+      <div class="containter">
+        <div class="row">
+          <div class="col-12 navbar">
+            <nav class="navbar navbar-light">
+              <a class="navbar-brand" href="#">
+                <img class="logo" src="img/logo.jpg" class="d-inline-block align-top" alt="eset logo">
+              </a>
+            </nav>
+          </div>
+        </div>
+      </div>
+  </header>    
+  <!--Header-->
+
+  
+  <!-- Modal -->
+    <div class="modal fade" id="pantallaH4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Edición de imágenes</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form id="archivo_form_p4" method="POST" action="/action_page.php">
+                  <input type="hidden" name="opcionPantalla2" value="p4">
+                  <input type="radio" style="display: none" name="pH4" value="imagen" checked>
+                  <div class="row" style="margin-left: 20px;">
+                    <p>Tipo de efecto:</p>
+                    <div class="col-md-12">
+                      <label for="">Efecto 1</label>
+                      <input type="radio" value="uno" name="efecto" id="efecto1">
+                      <label for="">Efecto 2</label>
+                      <input type="radio" value="dos" name="efecto" id="efecto2">
+                    </div>
+                  </div>
+                  <div  class="archivoH row">
+                    <div class="col-md-12 mt-3">
+                      <input type="file" name="pic" accept="image/*"/>
+                    </div>
+                    <button style="margin-left:20px;" type="button" id="subirArchivoP4" class="btn btn-info col-md-2 mt-3">Agregar</button>
+                    <div class="col-md-1"><img id="loading" style="display:none;width:50px;" src="loading.gif" alt=""></div>
+                  </div>
+                </form>
+
+                <div class="images mt-1">
+                    
+                    <div ng-repeat="i in img track by $index" class="imagn mr-1 mb-1" style="background-image: url('[[ i.url ]]')">
+                        <button type="button" ng-click="delImg(i.id)" class="close cerrar">
+                          <span class="cerrar x"aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    
+                  </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-dismiss="modal" href="selection.html">Cerrar</button>
+              
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+  <!--pantallas arriba-->
+  <div class="container">
+    <div class="container">
+      <div class="row center mt-5 mb-5">
+        
+        <div class="col-4 padding">
+          <div class="effectV">
+            
+            <div class="group mr-3">
+              <!--Pantalla 1-->
+              <div class="pantallaHorizontal m-1">
+                  <button type="button" class="btn btn-outline-secondary padding lp" ng-click="imgPantalla('p1')" data-toggle="modal" data-target="#pantallaH4">
+                      <h1 style="font-weight: bold">Pantalla 1<br>Horizontal</h1>
+                  </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-4 padding">
+          <div class="effectV">
+          
+          <div class="group mr-3"> 
+            <!--Pantalla 2-->
+            <div class="pantallaVertical m-1">
+                <button type="button" class="btn btn-outline-secondary padding lp" ng-click="imgPantalla('p2')" data-toggle="modal" data-target="#pantallaH4">
+                    <h1 style="font-weight: bold">Pantalla 2<br>Vertical</h1>
+                </button>
+            </div>
+          </div>
+          </div>
+        </div>
+        
+        <div class="col-4 padding">
+          <div class="effectV">
+
+          <div class="group mr-3">
+              <!--Pantalla 3-->
+              <div class="pantallaHorizontal m-1">
+                  <button type="button" class="btn btn-outline-secondary padding lp" ng-click="imgPantalla('p3')" data-toggle="modal" data-target="#pantallaH4">
+                      <h1 style="font-weight: bold">Pantalla 3<br>Horizontal</h1>
+                  </button>
+              </div>
+            </div>
+         </div>
+        </div>
+      </div>  
+        
+
+  <!--pantallas abajo-->
+
+    <!-- <div class="container padding mb-5">
+      <div class="row center">
+
+          
+          
+          <div class="tam mr-3 pantallaHorizontal">            
+                <button type="button" class="btn btn-outline-secondary padding lp" ng-click="imgPantalla('p4')" data-toggle="modal" data-target="#pantallaH4">
+                     <h1 style="font-weight: bold">Pantalla 4<br>Horizontal</h1>
+                </button>
+        
+          </div>
+          
+
+          
+        <div class="tam mr-3 pantallaHorizontal">            
+          <button type="button" class="btn btn-outline-secondary padding lp" ng-click="imgPantalla('p5')" data-toggle="modal" data-target="#pantallaH4">
+              <h1 style="font-weight: bold">Pantalla 5<br>Horizontal</h1>
+          </button>
+
+        </div>
+
+        
+        <div class="tam mr-3 pantallaHorizontal ">            
+            <button type="button" class="btn btn-outline-secondary padding lp" ng-click="imgPantalla('p6')" data-toggle="modal" data-target="#pantallaH4">
+            
+              <h1 style="font-weight: bold">Pantalla 4<br>Horizontal</h1>
+            
+            </button>  
+        </div>
+
+      </div>
+    </div> -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <!-- Optional JavaScript -->
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="http://malsup.github.com/jquery.form.js" defer></script>
+  <script src="/script.js"></script>
+
+  <script src="angular.min.js"></script>
+  <script>
+    
+    angular.module("app", [],
+
+    function ($interpolateProvider) {
+        $interpolateProvider.startSymbol('[[');
+        $interpolateProvider.endSymbol(']]');
+    })
+
+    .controller('controller', ['$scope', '$http', function ($scope, $http) {
+      
+      $scope.img = []
+
+      $scope.delImg = function(id){
+        $http.post("/delImages",{id:id,nPantalla:$scope.nPantalla}).then(
+          function (obj) {
+            $http.post("/getImages",{nPantalla:$scope.nPantalla}).then(
+            function (obj) {
+              $scope.img = obj.data;
+              console.log(obj.data)
+            }).catch(
+              function (err) {
+                  console.log(err)
+              });
+          }).catch(
+          function (err) {
+              console.log(err)
+          });
+      }
+
+      $(document).ready(function(){
+
+        $scope.nPantalla = []
+
+        $("input[name=efecto]").change(function(){
+          $http.post("/setEfecto",{valor:this.value,nPantalla:$scope.nPantalla}).then(
+            function (obj) {
+            }).catch(
+            function (err) {
+                console.log(err)
+            });  
+        })
+
+        
+        
+
+        $("#subirArchivoP4").click(function(){  
+
+          $("#loading").show()
+
+          //alert($("input[name='pH4']:checked").val())
+
+          $('#archivo_form_p4').attr('action', '/uploadFile/'+$("input[name='pH4']:checked").val()+'/'+$scope.nPantalla);
+
+          $('#archivo_form_p4').ajaxForm({
+              success: function (data) {
+                $http.post("/getImages",{nPantalla:$scope.nPantalla}).then(
+                  function (obj) {
+                      //$scope.$apply(function () {
+                        $scope.img = obj.data;
+                        console.log(obj.data)
+                      //})
+                  }).catch(
+                  function (err) {
+                      console.log(err)
+                  });    
+                  $("#loading").hide()
+              },
+              error: function (e) {
+                  console.log(e);
+                  $http.post("/getImages",{nPantalla:$scope.nPantalla}).then(
+                  function (obj) {
+                      //$scope.$apply(function () {
+                        $scope.img = obj.data;
+                        console.log(obj.data)
+                      //})
+                  }).catch(
+                  function (err) {
+                      console.log(err)
+                  });  
+                  $("#loading").hide()
+              }
+          });
+
+
+          $("#archivo_form_p4").submit();
+
+        })
+
+      })
+
+      $scope.imgPantalla = function(nPantalla){
+        $scope.img = []
+
+        $scope.nPantalla = nPantalla
+        $(document).ready(function(){
+          $("input[name=efecto]").filter('[value=cero]');  
+        })
+        
+
+        $http.post("/getEfecto",{nPantalla:$scope.nPantalla}).then(
+            function (obj) {
+              console.log("Tipo: "+obj.data[0].tipo)
+              $("input[name=efecto]").filter('[value='+obj.data[0].tipo+']').prop('checked', true);
+            }).catch(
+            function (err) {
+                console.log(err)
+            });
+
+        $http.post("/getImages",{nPantalla:nPantalla}).then(
+          function (obj) {
+              $scope.img = obj.data;
+              console.log(obj.data)
+          }).catch(
+          function (err) {
+              console.log(err)
+          });        
+      }
+
+
+    }])
+
+  </script>
+
+</body>
+</html>
